@@ -29,4 +29,4 @@ Include a link or GIF that demonstrates the appearance and functionality of your
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/netflix-clone.git
+git clone https://github.com/Prasen45/Netflix-Clone.git
