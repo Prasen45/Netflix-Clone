@@ -24,6 +24,8 @@ nav img {
     position: relative;
     z-index: 10;
     top: 12px;
+    color: rgb(229, 9, 20);
+    fill: currentColor;
 }
 
 nav button {
@@ -33,7 +35,6 @@ nav button {
 
 .main {
     background-image: url("assets/Images/Home-Page-Background.jpg");
-    /* background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%); */
     background-position: center center;
     background-repeat: no-repeat;
     background-size: max(1200px, 100vw);
@@ -80,12 +81,12 @@ nav button {
     text-align: center;
 }
 
-.separation{
+.separation {
     height: 5.6px;
     background-color: rgb(68, 68, 68);
 }
 
-.btn{
+.btn {
     padding: 3px 8px;
     background-color: rgba(248, 243, 243, 0.133);
     color: white;
@@ -95,19 +96,20 @@ nav button {
     cursor: pointer;
 }
 
-.hero-buttons{
+.hero-buttons {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 5px;
 }
 
-.btn-red-sm{
+.btn-red-sm {
     background-color: red;
     color: white;
 }
 
-.btn-red{
+.btn-red {
     background-color: red;
     color: white;
     padding: 3px 24px;
@@ -116,13 +118,253 @@ nav button {
     border-radius: 4px;
 }
 
-.main input{
+.main input {
     padding: 8px 0;
     padding-left: 16px;
     padding-right: 140px;
     font-size: 15px;
     border-radius: 4px;
     color: white;
-    background-color: rgba(23,23,23,0.7);
+    background-color: rgba(23, 23, 23, 0.7);
     border: 1px solid rgba(234, 231, 231, 0.5);
+}
+
+.first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 70vw;
+    padding: 5.6rem 0;
+    margin: auto;
+    color: white;
+}
+
+@media screen and (max-width:1300px) {
+
+    nav {
+        max-width: 90vw;
+    }
+
+    .first {
+        flex-wrap: wrap;
+    }
+}
+
+.secImg {
+    position: relative;
+}
+
+.secImg img {
+    width: 555px;
+    position: relative;
+    z-index: 10;
+}
+
+.secImg video {
+    position: absolute;
+    left: 4.7rem;
+    top: 5.5rem;
+    width: 25rem;
+}
+
+
+.first>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.first>div :first-child {
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.first>div :nth-child(2) {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.third .secImg video {
+    position: absolute;
+    left: 5.6rem;
+    top: 1.9rem;
+    width: 21.9rem;
+}
+
+.faq {
+    background-color: black;
+    color: white;
+    padding: 34px;
+}
+
+.faq h2 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.faqbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 400;
+    background-color: rgb(45, 45, 45);
+    color: rgb(255, 255, 255);
+    padding: 24px;
+    max-width: 72vw;
+    cursor: pointer;
+    margin: 8px auto;
+    transition: all 1s ease-out;
+}
+
+.faqbox svg {
+    filter: invert(1);
+    height: 0%;
+    width: 4%;
+}
+
+.faqbox:hover {
+    background-color: #414141;
+}
+
+.hero-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 32px;
+
+}
+
+.hero-footer span {
+    font-size: 24px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+}
+
+.hero-footer input {
+    padding: 8px 0;
+    padding-left: 16px;
+    padding-right: 140px;
+    font-size: 15px;
+    border-radius: 4px;
+    color: white;
+    background-color: rgba(23, 23, 23, 0.7);
+    border: 1px solid rgba(234, 231, 231, 0.5);
+}
+
+footer {
+    color: rgba(255, 255, 255, 0.7);
+    margin: auto;
+    max-width: 75vw;
+    padding: 34px;
+}
+
+footer .question {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 23px 0;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.footer-btn {
+    width: 50%;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+@media screen and (max-width: 1300px) {
+    .footer {
+        grid-template-columns: 1fr 1fr;
+        gap: 34px
+    }
+
+    .secImg img {
+        width: 372px;
+    }
+
+    .secImg video {
+        width: 266px;
+        top: 61px;
+        left: 53px;
+    }
+
+    .third .secImg video {
+        top: 28px;
+        width: 230px;
+        left: 75px;
+    }
+
+    .hero> :first-child {
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .hero> :nth-child(2) {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .main input {
+        max-width: 50%;
+        margin: 5px;
+    }
+
+    .hero-footer input {
+        max-width: 50%;
+        margin: 9px;
+    }
+
+    .first>div :first-child {
+        font-size: 32px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    #mobile {
+        margin-bottom: 29px;
+    }
+
+    .faq h2 {
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .faqbox {
+        font-size: 18px;
+    }
+
+    .hero-footer span {
+        font-size: 17px;
+        text-align: center;
+    }
+
+    .first>div :nth-child(2) {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .main {
+        height: 68vh;
+    }
+
+    .main .box {
+        height: 68vh;
+    }
 }
